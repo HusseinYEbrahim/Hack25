@@ -19,7 +19,7 @@ infer = model.signatures["serving_default"]
 server_ip = '3.70.97.142'
 api_base_url = f'http://{server_ip}:5000/eagle/'
 
-team_id='kArHbcl'
+#team_id='kArHbcl'
 
 def remove_nans(data):
     spectrograms = data
@@ -202,21 +202,21 @@ def submit_eagle_attempt(team_id):
 
 
 
-submit_eagle_attempt(team_id)
+#submit_eagle_attempt(team_id)
 
 
 #-----------------TESTING----------------------------#
-#json_file_path = './test2.0.json'
-#with open(json_file_path, 'r') as file:
-    #data = json.load(file)
+json_file_path = './test2.0.json'
+with open(json_file_path, 'r') as file:
+    data = json.load(file)
 
-#start = time.time()
-#print(get_channel_intercept(data))
-#end = time.time()
-#print(end - start)
+start = time.time()
+print(get_channel_intercept(data))
+end = time.time()
+print(end - start)
 
-#cleaned = remove_nans(np.array(data['3']))
-#print(get_model_prediction2(cleaned))
+cleaned = remove_nans(np.array(data['3']))
+print(get_model_prediction2(cleaned))
 
     
 
