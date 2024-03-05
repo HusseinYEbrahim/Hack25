@@ -1,6 +1,6 @@
 import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib.pyplot import imread
+#import matplotlib.pyplot as plt
+#from matplotlib.pyplot import imread
 import time
 
 class SteganographyException(Exception):
@@ -158,8 +158,3 @@ def encode(image: np.ndarray, message: str) -> np.array:
 def decode(encoded: np.array) -> str:
     steg = LSBSteg(encoded)
     return steg.decode_text()
-
-if __name__=="__main__":
-    filepath = "Hussein.jpg"
-    image = imread(filepath)
-    encoded_np_image = encode(np.array(image), 'Welcom to HackTrick!!!!')
